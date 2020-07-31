@@ -1,0 +1,344 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+} 
+ul,li ,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: @c[c1];
+}
+a:hover{color:red;}
+.logo {
+    width: 250px;
+    height: 40px;
+}
+
+.flex {
+    display: flex ;
+}
+@c:{
+    c1:#666;//内容文字
+    c2:#1e90ff;//标题颜色
+    c3:#1c4982;//头部尾部颜色
+    c4:#698bcb;//nav颜色
+    c5:#fff;//白色
+}
+.w1000() {
+    width: 1000px;
+    margin: 0px auto;
+}
+.w414(){
+    width: 414px;
+    margin: 0 auto;
+}
+.hjz{
+   .w1000();
+    justify-content: space-between;
+}
+
+
+
+
+
+// 头部
+header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: @c[c3];
+    img{
+        margin-top: 10px;
+    }
+}
+
+
+
+// 导航
+nav{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: @c[c4];
+    position: relative;
+    div{
+        .w1000();
+        text-align: center;
+        a{
+            color:@c[c5];
+            width: 200px;
+            font-size: 16px;
+            padding: 0 15px ;
+            border-right: 1px solid @c[c5];
+        }
+        a:nth-of-type(10){
+            border: none;
+        }
+    }
+}
+
+
+// 内容
+.lt{
+    width: 60px;
+    height: 3px;
+    background-color: @c[c2];
+    display: inline-block;
+    position: absolute;
+    top: 26px;
+    right: 0px ;
+}
+.gengduo{
+    font-size: 10px;
+    color:@c[c1];
+    margin-left: 160px;
+}
+.gengduo2{
+    font-size: 10px;
+    color:@c[c1];
+    margin-left: 600px;
+}
+main{
+    .w1000();
+    .bn{
+        .w1000();
+        height: 200px;
+        margin-bottom: 30px;
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+        #ul1{
+            width: 6000px;
+            position: absolute;
+            left: 0;
+            li{
+                float: right;
+            }
+        }
+        .left{
+            width: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #fff;
+            opacity: 0.5;
+            border-radius: 0 5px 5px 0;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            color: rgb(92, 90, 90);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .right{
+            width: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #fff;
+            opacity: 0.5;
+            border-radius: 5px 0 0 5px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            color: rgb(92, 90, 90);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .left:hover{
+            opacity: 1;
+        }
+        .right:hover{
+            opacity: 1;
+        }
+        #ul2{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            li{
+                width: 35px;
+                height: 4px;
+                background-color: #fff;
+                opacity: 0.5;
+                float: left;
+                margin:0 10px;
+                transition: 0.2s;
+                cursor: pointer;
+            }
+            & > li:hover{
+                opacity: 1;
+            }
+        }
+        
+    }
+
+    .box_div2{
+        padding-left: 5px;
+         img{
+                width: 250px;
+                height: 140px;
+                margin-top: 5px;
+            }
+        dl:nth-of-type(1){
+            width: 250px;
+        }
+        dl:nth-of-type(2){
+           width: 250px;
+            dd{
+                height: 50px;
+                line-height: 50px;
+                font-size: 12px;
+                color: @c[c1];
+                position: relative;
+                padding-left:5px ;
+                border-bottom: 1px dashed #ccc;
+            }
+            .tshij{
+                position: absolute;
+                font-size: 10px;
+                top: 15px;
+                left: 25px;
+            }
+            .biao{
+                width: 10px;
+                height: 10px;
+                background: url(./素材/时间.jpg) no-repeat 0px 0px;
+                background-size: 80%;
+                display: inline-block;
+                position: absolute;
+                top: 35px;
+                left: 15px;
+            }
+        }
+    }
+   
+    dt{
+        color: @c[c2];
+        height: 30px;
+        border-bottom:1px solid #ccc;
+        position: relative;
+    }
+
+//aside结束
+
+
+.youce{
+    margin-left: 30px;
+    dl{
+        width: 705px;
+    }
+    
+    
+    //校友
+    .xiaoyou{
+
+        dd{
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            color: @c[c1];
+            position: relative;
+            padding-left:20px;
+            border-bottom: 1px dashed #ccc;
+        }
+    
+    }
+}
+.riqi{
+    color: #999;
+    font-size: 10px;
+    margin-left: 400px;
+}
+.riqi2{
+    color: #999;
+    font-size: 10px;
+    margin-left: 265px;
+}
+.youjiantou{
+    width: 20px;
+    height: 20px;
+    background: url(./素材/右箭头.jpg) no-repeat 0px 0px;
+    background-size: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+//校友结束
+//视点开始
+.shidian{
+    dd{
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        color: @c[c1];
+        position: relative;
+        padding-left:20px;
+        border-bottom: 1px dashed #ccc;
+    }
+}
+// 视点结束
+// 校园风采
+.fengcai{
+    img{
+        width: 150px;
+        height: 100px;
+        border-radius: 5px;
+        margin: 5px 10px 0px 10px;
+    }
+}
+// 校园风采结束
+}
+// 尾部开始
+.selectmg{
+    margin-left: 300px;
+}
+.wechatmg{
+    margin-left: 100px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: @c[c3];
+    font-size: 10px;
+    .foter{
+        .w1000();
+    }
+    color: @c[c5];
+    .logobuttom{
+        width: 50px;
+        height: 50px;
+        background: url(./素材/logo.png) no-repeat 0px 0px;
+       background-size: 550%;
+       margin-top: 20px;
+    }
+    ul,dl{
+        margin-top: 10px;
+    }
+    ul{
+        li{
+            height: 20px;
+        }
+    }
+    dl>dd{
+        text-align: center;
+        img{
+        width: 50px;
+        height: 50px;
+         }
+    }
+    select{
+        width: 200px;
+        height: 25px;
+        border-radius: 0px;
+        margin-top: 10px;
+    }
+}
+// 尾部结束
